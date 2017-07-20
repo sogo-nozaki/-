@@ -1,0 +1,289 @@
+2016-03-18 12:21:38,319 INFO  [main] INFO  (jp.towersquest.squat.Application:22) - setup application
+2016-03-18 12:21:38,319 INFO  [main] INFO  (jp.towersquest.squat.Application:23) - set Look And Feel
+2016-03-18 12:21:38,413 INFO  [main] INFO  (jp.towersquest.squat.look.impl.LAFSelectorImpl:41) - Selected LAF: jp.towersquest.squat.look.impl.WindowsLAFDefinition
+2016-03-18 12:21:38,685 INFO  [main] INFO  (jp.towersquest.squat.Application:28) - create DIContainer
+2016-03-18 12:21:39,185 INFO  [main] INFO  (jp.towersquest.squat.Application:31) - initialize DIContainer
+2016-03-18 12:21:39,466 INFO  [main] INFO  (jp.towersquest.squat.Application:34) - start lifecycle for SQUAT
+2016-03-18 12:21:39,466 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.runtime.name=Java(TM) SE Runtime Environment
+2016-03-18 12:21:39,466 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.boot.library.path=C:\Program Files\Java\jre1.8.0_73\bin
+2016-03-18 12:21:39,466 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.vm.version=25.73-b02
+2016-03-18 12:21:39,466 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - path.separator=;
+2016-03-18 12:21:39,466 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2016-03-18 12:21:39,466 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - file.encoding.pkg=sun.io
+2016-03-18 12:21:39,466 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - user.country=JP
+2016-03-18 12:21:39,466 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.os.patch.level=
+2016-03-18 12:21:39,466 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.vm.specification.name=Java Virtual Machine Specification
+2016-03-18 12:21:39,466 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - user.dir=C:\Users\����\Desktop\�����ROM�ɂ₭\SQL_DRILL\SQUAT_APP\squat-1.0.2\squat-1.0.2
+2016-03-18 12:21:39,466 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.runtime.version=1.8.0_73-b02
+2016-03-18 12:21:39,466 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment
+2016-03-18 12:21:39,466 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - os.arch=amd64
+2016-03-18 12:21:39,466 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - os.name=Windows 10
+2016-03-18 12:21:39,466 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.jnu.encoding=MS932
+2016-03-18 12:21:39,466 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.class.version=52.0
+2016-03-18 12:21:39,466 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+2016-03-18 12:21:39,466 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - os.version=10.0
+2016-03-18 12:21:39,466 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - user.timezone=Asia/Tokyo
+2016-03-18 12:21:39,482 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - file.encoding=MS932
+2016-03-18 12:21:39,482 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.specification.version=1.8
+2016-03-18 12:21:39,482 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.arch.data.model=64
+2016-03-18 12:21:39,482 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - awt.toolkit=sun.awt.windows.WToolkit
+2016-03-18 12:21:39,482 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.vm.info=mixed mode
+2016-03-18 12:21:39,482 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.version=1.8.0_73
+2016-03-18 12:21:39,482 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.desktop=windows
+2016-03-18 12:21:39,482 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.cpu.isalist=amd64
+2016-03-18 12:21:47,021 INFO  [main] INFO  (jp.towersquest.squat.aop.logging.LoggingUserInformation:18) - jp.towersquest.squat.dao.User@5745ca0e[id=1,name=ddd] was loaded
+2016-03-18 12:21:59,793 INFO  [AWT-EventQueue-0] INFO  (jp.towersquest.squat.mainframe.action.ExitActionAdapter:21) - squat process is shutting down
+2017-07-15 10:32:06,173 INFO  [main] INFO  (jp.towersquest.squat.Application:22) - setup application
+2017-07-15 10:32:06,177 INFO  [main] INFO  (jp.towersquest.squat.Application:23) - set Look And Feel
+2017-07-15 10:32:06,477 INFO  [main] INFO  (jp.towersquest.squat.look.impl.LAFSelectorImpl:41) - Selected LAF: jp.towersquest.squat.look.impl.MacOSXLAFDefinition
+2017-07-15 10:32:07,952 INFO  [main] INFO  (jp.towersquest.squat.Application:28) - create DIContainer
+2017-07-15 10:32:08,719 INFO  [main] INFO  (jp.towersquest.squat.Application:31) - initialize DIContainer
+2017-07-15 10:32:09,029 INFO  [main] INFO  (jp.towersquest.squat.Application:34) - start lifecycle for SQUAT
+2017-07-15 10:32:09,029 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.runtime.name=Java(TM) SE Runtime Environment
+2017-07-15 10:32:09,030 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.boot.library.path=/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/lib
+2017-07-15 10:32:09,030 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.vm.version=25.131-b11
+2017-07-15 10:32:09,030 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - path.separator=:
+2017-07-15 10:32:09,030 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2017-07-15 10:32:09,030 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - file.encoding.pkg=sun.io
+2017-07-15 10:32:09,030 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - user.country=JP
+2017-07-15 10:32:09,030 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.os.patch.level=unknown
+2017-07-15 10:32:09,030 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.vm.specification.name=Java Virtual Machine Specification
+2017-07-15 10:32:09,030 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - user.dir=/Users/nonno/Dropbox/アプリ/squat-1.0.2/squat-1.0.2
+2017-07-15 10:32:09,032 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.runtime.version=1.8.0_131-b11
+2017-07-15 10:32:09,033 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.awt.graphicsenv=sun.awt.CGraphicsEnvironment
+2017-07-15 10:32:09,033 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - os.arch=x86_64
+2017-07-15 10:32:09,033 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - os.name=Mac OS X
+2017-07-15 10:32:09,033 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.jnu.encoding=UTF-8
+2017-07-15 10:32:09,033 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.class.version=52.0
+2017-07-15 10:32:09,034 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+2017-07-15 10:32:09,034 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - os.version=10.12.5
+2017-07-15 10:32:09,034 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - user.timezone=Asia/Tokyo
+2017-07-15 10:32:09,034 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - file.encoding=UTF-8
+2017-07-15 10:32:09,034 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.specification.version=1.8
+2017-07-15 10:32:09,034 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.arch.data.model=64
+2017-07-15 10:32:09,035 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - awt.toolkit=sun.lwawt.macosx.LWCToolkit
+2017-07-15 10:32:09,035 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.vm.info=mixed mode
+2017-07-15 10:32:09,035 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - java.version=1.8.0_131
+2017-07-15 10:32:09,035 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.desktop=null
+2017-07-15 10:32:09,035 INFO  [main] INFO  (jp.towersquest.squat.task.impl.LoggingSystemProperties:48) - sun.cpu.isalist=
+2017-07-15 10:32:25,885 INFO  [main] INFO  (jp.towersquest.squat.aop.logging.LoggingUserInformation:18) - jp.towersquest.squat.dao.User@58d75e99[id=2,name=nonno] was loaded
+2017-07-15 10:34:03,307 ERROR [Thread-15] ERROR (jp.towersquest.squat.aop.throwsinterceptor.HandleThrowableInterceptor:21) - 
+jp.towersquest.squat.exception.EmptyQueryRuntimeException: empty query
+	at jp.towersquest.squat.task.impl.ValidateInputQueryTask.validate(ValidateInputQueryTask.java:47)
+	at jp.towersquest.squat.task.impl.ValidateInputQueryTask.execute(ValidateInputQueryTask.java:30)
+	at jp.towersquest.squat.task.impl.ValidateInputQueryTask$$EnhancedByS2AOP$$6ae5aa72.execute$$invokeSuperMethod$$(ValidateInputQueryTask$$EnhancedByS2AOP$$6ae5aa72.java)
+	at jp.towersquest.squat.task.impl.ValidateInputQueryTask$$EnhancedByS2AOP$$6ae5aa72$$MethodInvocation$$execute0.proceed(MethodInvocationClassGenerator.java)
+	at org.seasar.framework.aop.interceptors.ThrowsInterceptor.invoke(ThrowsInterceptor.java:64)
+	at jp.towersquest.squat.task.impl.ValidateInputQueryTask$$EnhancedByS2AOP$$6ae5aa72$$MethodInvocation$$execute0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.task.impl.ValidateInputQueryTask$$EnhancedByS2AOP$$6ae5aa72.execute(ValidateInputQueryTask$$EnhancedByS2AOP$$6ae5aa72.java)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.execute(AssertEqualsAction.java:80)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.access$000(AssertEqualsAction.java:20)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction$1.run(AssertEqualsAction.java:41)
+	at java.lang.Thread.run(Thread.java:748)
+2017-07-15 10:34:09,948 ERROR [Thread-18] ERROR (jp.towersquest.squat.aop.throwsinterceptor.HandleThrowableInterceptor:21) - 
+jp.towersquest.squat.exception.EmptyQueryRuntimeException: empty query
+	at jp.towersquest.squat.task.impl.ValidateInputQueryTask.validate(ValidateInputQueryTask.java:47)
+	at jp.towersquest.squat.task.impl.ValidateInputQueryTask.execute(ValidateInputQueryTask.java:30)
+	at jp.towersquest.squat.task.impl.ValidateInputQueryTask$$EnhancedByS2AOP$$6ae5aa72.execute$$invokeSuperMethod$$(ValidateInputQueryTask$$EnhancedByS2AOP$$6ae5aa72.java)
+	at jp.towersquest.squat.task.impl.ValidateInputQueryTask$$EnhancedByS2AOP$$6ae5aa72$$MethodInvocation$$execute0.proceed(MethodInvocationClassGenerator.java)
+	at org.seasar.framework.aop.interceptors.ThrowsInterceptor.invoke(ThrowsInterceptor.java:64)
+	at jp.towersquest.squat.task.impl.ValidateInputQueryTask$$EnhancedByS2AOP$$6ae5aa72$$MethodInvocation$$execute0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.task.impl.ValidateInputQueryTask$$EnhancedByS2AOP$$6ae5aa72.execute(ValidateInputQueryTask$$EnhancedByS2AOP$$6ae5aa72.java)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.execute(AssertEqualsAction.java:80)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.access$000(AssertEqualsAction.java:20)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction$1.run(AssertEqualsAction.java:41)
+	at java.lang.Thread.run(Thread.java:748)
+2017-07-15 22:29:58,841 ERROR [Thread-21] ERROR (jp.towersquest.squat.aop.throwsinterceptor.HandleThrowableInterceptor:21) - 
+jp.towersquest.squat.exception.EmptyQueryRuntimeException: empty query
+	at jp.towersquest.squat.task.impl.ValidateInputQueryTask.validate(ValidateInputQueryTask.java:47)
+	at jp.towersquest.squat.task.impl.ValidateInputQueryTask.execute(ValidateInputQueryTask.java:30)
+	at jp.towersquest.squat.task.impl.ValidateInputQueryTask$$EnhancedByS2AOP$$6ae5aa72.execute$$invokeSuperMethod$$(ValidateInputQueryTask$$EnhancedByS2AOP$$6ae5aa72.java)
+	at jp.towersquest.squat.task.impl.ValidateInputQueryTask$$EnhancedByS2AOP$$6ae5aa72$$MethodInvocation$$execute0.proceed(MethodInvocationClassGenerator.java)
+	at org.seasar.framework.aop.interceptors.ThrowsInterceptor.invoke(ThrowsInterceptor.java:64)
+	at jp.towersquest.squat.task.impl.ValidateInputQueryTask$$EnhancedByS2AOP$$6ae5aa72$$MethodInvocation$$execute0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.task.impl.ValidateInputQueryTask$$EnhancedByS2AOP$$6ae5aa72.execute(ValidateInputQueryTask$$EnhancedByS2AOP$$6ae5aa72.java)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.execute(AssertEqualsAction.java:80)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.access$000(AssertEqualsAction.java:20)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction$1.run(AssertEqualsAction.java:41)
+	at java.lang.Thread.run(Thread.java:748)
+2017-07-15 22:30:06,805 ERROR [Thread-24] ERROR (jp.towersquest.squat.aop.throwsinterceptor.HandleThrowableInterceptor:21) - 
+org.seasar.framework.exception.SQLRuntimeException: [ESSR0071]SQLで例外(ErrorCode=42001, SQLState=42001)が発生しました。理由はorg.seasar.framework.exception.SSQLException: [ESSR0072]SQLで例外(SQL=[select], ErrorCode={1}, SQLState={2})が発生しました
+	at org.seasar.extension.jdbc.util.ConnectionUtil.prepareStatement(ConnectionUtil.java:52)
+	at org.seasar.extension.jdbc.impl.BasicStatementFactory.createPreparedStatement(BasicStatementFactory.java:34)
+	at org.seasar.extension.jdbc.impl.ConfigurableStatementFactory.createPreparedStatement(ConfigurableStatementFactory.java:44)
+	at org.seasar.extension.jdbc.impl.BasicHandler.prepareStatement(BasicHandler.java:95)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.prepareStatement(BasicSelectHandler.java:146)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:131)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:120)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:110)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.select(LimitedPlainSqlRequester.java:76)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.execute(LimitedPlainSqlRequester.java:37)
+	at jp.towersquest.squat.unit.impl.CompareTwoSelectQuery.analyzeQuery(CompareTwoSelectQuery.java:86)
+	at jp.towersquest.squat.unit.impl.CompareTwoSelectQuery.compare(CompareTwoSelectQuery.java:43)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.compareSelectQuery(AssertionImpl.java:87)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.doCompare(AssertionImpl.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.assertQuery(AssertionImpl.java:53)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51.assertQuery$$invokeSuperMethod$$(AssertionImpl$$EnhancedByS2AOP$$2a798d51.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at org.seasar.framework.aop.interceptors.ThrowsInterceptor.invoke(ThrowsInterceptor.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.aop.LoggingHistoryInterceptor.invoke(LoggingHistoryInterceptor.java:29)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51.assertQuery(AssertionImpl$$EnhancedByS2AOP$$2a798d51.java)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.doAssertion(AssertEqualsAction.java:139)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.execute(AssertEqualsAction.java:96)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.access$000(AssertEqualsAction.java:20)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction$1.run(AssertEqualsAction.java:41)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.seasar.framework.exception.SSQLException: [ESSR0072]SQLで例外(SQL=[select], ErrorCode={1}, SQLState={2})が発生しました
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.wrapException(ConnectionWrapperImpl.java:526)
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.prepareStatement(ConnectionWrapperImpl.java:144)
+	at org.seasar.extension.jdbc.util.ConnectionUtil.prepareStatement(ConnectionUtil.java:50)
+	... 26 more
+Caused by: org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement SELECT ; expected TOP, LIMIT, DISTINCT, ALL, *, NOT, EXISTS [42001-41]
+	at org.h2.message.Message.getSQLException(Message.java:65)
+	at org.h2.message.Message.getSyntaxError(Message.java:75)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:420)
+	at org.h2.command.Parser.readTerm(Parser.java:1908)
+	at org.h2.command.Parser.readFactor(Parser.java:1500)
+	at org.h2.command.Parser.readSum(Parser.java:1487)
+	at org.h2.command.Parser.readConcat(Parser.java:1479)
+	at org.h2.command.Parser.readCondition(Parser.java:1360)
+	at org.h2.command.Parser.readAnd(Parser.java:1341)
+	at org.h2.command.Parser.readExpression(Parser.java:1333)
+	at org.h2.command.Parser.parseSelectSimpleSelectPart(Parser.java:1255)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:1285)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1194)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1081)
+	at org.h2.command.Parser.parseSelect(Parser.java:1062)
+	at org.h2.command.Parser.parse(Parser.java:338)
+	at org.h2.command.Parser.parse(Parser.java:223)
+	at org.h2.command.Parser.prepareCommand(Parser.java:190)
+	at org.h2.engine.Session.prepareLocal(Session.java:174)
+	at org.h2.engine.Session.prepareCommand(Session.java:156)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:993)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:1197)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:167)
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.prepareStatement(ConnectionWrapperImpl.java:140)
+	... 27 more
+2017-07-15 22:30:19,130 ERROR [Thread-37] ERROR (jp.towersquest.squat.aop.throwsinterceptor.HandleThrowableInterceptor:21) - 
+org.seasar.framework.exception.SQLRuntimeException: [ESSR0071]SQLで例外(ErrorCode=42001, SQLState=42001)が発生しました。理由はorg.seasar.framework.exception.SSQLException: [ESSR0072]SQLで例外(SQL=[select ;], ErrorCode={1}, SQLState={2})が発生しました
+	at org.seasar.extension.jdbc.util.ConnectionUtil.prepareStatement(ConnectionUtil.java:52)
+	at org.seasar.extension.jdbc.impl.BasicStatementFactory.createPreparedStatement(BasicStatementFactory.java:34)
+	at org.seasar.extension.jdbc.impl.ConfigurableStatementFactory.createPreparedStatement(ConfigurableStatementFactory.java:44)
+	at org.seasar.extension.jdbc.impl.BasicHandler.prepareStatement(BasicHandler.java:95)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.prepareStatement(BasicSelectHandler.java:146)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:131)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:120)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:110)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.select(LimitedPlainSqlRequester.java:76)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.execute(LimitedPlainSqlRequester.java:37)
+	at jp.towersquest.squat.unit.impl.CompareTwoSelectQuery.analyzeQuery(CompareTwoSelectQuery.java:86)
+	at jp.towersquest.squat.unit.impl.CompareTwoSelectQuery.compare(CompareTwoSelectQuery.java:43)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.compareSelectQuery(AssertionImpl.java:87)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.doCompare(AssertionImpl.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.assertQuery(AssertionImpl.java:53)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51.assertQuery$$invokeSuperMethod$$(AssertionImpl$$EnhancedByS2AOP$$2a798d51.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at org.seasar.framework.aop.interceptors.ThrowsInterceptor.invoke(ThrowsInterceptor.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.aop.LoggingHistoryInterceptor.invoke(LoggingHistoryInterceptor.java:29)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51.assertQuery(AssertionImpl$$EnhancedByS2AOP$$2a798d51.java)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.doAssertion(AssertEqualsAction.java:139)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.execute(AssertEqualsAction.java:96)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.access$000(AssertEqualsAction.java:20)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction$1.run(AssertEqualsAction.java:41)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.seasar.framework.exception.SSQLException: [ESSR0072]SQLで例外(SQL=[select ;], ErrorCode={1}, SQLState={2})が発生しました
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.wrapException(ConnectionWrapperImpl.java:526)
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.prepareStatement(ConnectionWrapperImpl.java:144)
+	at org.seasar.extension.jdbc.util.ConnectionUtil.prepareStatement(ConnectionUtil.java:50)
+	... 26 more
+Caused by: org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement SELECT ;[*] ; expected TOP, LIMIT, DISTINCT, ALL, *, NOT, EXISTS, SELECT, FROM [42001-41]
+	at org.h2.message.Message.getSQLException(Message.java:65)
+	at org.h2.message.Message.getSyntaxError(Message.java:75)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:420)
+	at org.h2.command.Parser.readTerm(Parser.java:1776)
+	at org.h2.command.Parser.readFactor(Parser.java:1500)
+	at org.h2.command.Parser.readSum(Parser.java:1487)
+	at org.h2.command.Parser.readConcat(Parser.java:1479)
+	at org.h2.command.Parser.readCondition(Parser.java:1360)
+	at org.h2.command.Parser.readAnd(Parser.java:1341)
+	at org.h2.command.Parser.readExpression(Parser.java:1333)
+	at org.h2.command.Parser.parseSelectSimpleSelectPart(Parser.java:1255)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:1285)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1194)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1081)
+	at org.h2.command.Parser.parseSelect(Parser.java:1062)
+	at org.h2.command.Parser.parse(Parser.java:338)
+	at org.h2.command.Parser.parse(Parser.java:223)
+	at org.h2.command.Parser.prepareCommand(Parser.java:190)
+	at org.h2.engine.Session.prepareLocal(Session.java:174)
+	at org.h2.engine.Session.prepareCommand(Session.java:156)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:993)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:1197)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:167)
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.prepareStatement(ConnectionWrapperImpl.java:140)
+	... 27 more
+2017-07-15 22:30:26,818 ERROR [Thread-50] ERROR (jp.towersquest.squat.aop.throwsinterceptor.HandleThrowableInterceptor:21) - 
+org.seasar.framework.exception.SQLRuntimeException: [ESSR0071]SQLで例外(ErrorCode=42001, SQLState=42001)が発生しました。理由はorg.seasar.framework.exception.SSQLException: [ESSR0072]SQLで例外(SQL=[select;], ErrorCode={1}, SQLState={2})が発生しました
+	at org.seasar.extension.jdbc.util.ConnectionUtil.prepareStatement(ConnectionUtil.java:52)
+	at org.seasar.extension.jdbc.impl.BasicStatementFactory.createPreparedStatement(BasicStatementFactory.java:34)
+	at org.seasar.extension.jdbc.impl.ConfigurableStatementFactory.createPreparedStatement(ConfigurableStatementFactory.java:44)
+	at org.seasar.extension.jdbc.impl.BasicHandler.prepareStatement(BasicHandler.java:95)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.prepareStatement(BasicSelectHandler.java:146)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:131)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:120)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:110)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.select(LimitedPlainSqlRequester.java:76)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.execute(LimitedPlainSqlRequester.java:37)
+	at jp.towersquest.squat.unit.impl.CompareTwoSelectQuery.analyzeQuery(CompareTwoSelectQuery.java:86)
+	at jp.towersquest.squat.unit.impl.CompareTwoSelectQuery.compare(CompareTwoSelectQuery.java:43)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.compareSelectQuery(AssertionImpl.java:87)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.doCompare(AssertionImpl.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.assertQuery(AssertionImpl.java:53)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51.assertQuery$$invokeSuperMethod$$(AssertionImpl$$EnhancedByS2AOP$$2a798d51.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at org.seasar.framework.aop.interceptors.ThrowsInterceptor.invoke(ThrowsInterceptor.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.aop.LoggingHistoryInterceptor.invoke(LoggingHistoryInterceptor.java:29)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51.assertQuery(AssertionImpl$$EnhancedByS2AOP$$2a798d51.java)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.doAssertion(AssertEqualsAction.java:139)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.execute(AssertEqualsAction.java:96)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.access$000(AssertEqualsAction.java:20)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction$1.run(AssertEqualsAction.java:41)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.seasar.framework.exception.SSQLException: [ESSR0072]SQLで例外(SQL=[select;], ErrorCode={1}, SQLState={2})が発生しました
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.wrapException(ConnectionWrapperImpl.java:526)
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.prepareStatement(ConnectionWrapperImpl.java:144)
+	at org.seasar.extension.jdbc.util.ConnectionUtil.prepareStatement(ConnectionUtil.java:50)
+	... 26 more
+Caused by: org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement SELECT;[*] ; expected TOP, LIMIT, DISTINCT, ALL, *, NOT, EXISTS, SELECT, FROM [42001-41]
+	at org.h2.message.Message.getSQLException(Message.java:65)
+	at org.h2.message.Message.getSyntaxError(Message.java:75)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:420)
+	at org.h2.command.Parser.readTerm(Parser.java:1776)
+	at org.h2.command.Parser.readFactor(Parser.java:1500)
+	at org.h2.command.Parser.readSum(Parser.java:1487)
+	at org.h2.command.Parser.readConcat(Parser.java:1479)
+	at org.h2.command.Parser.readCondition(Parser.java:1360)
+	at org.h2.command.Parser.readAnd(Parser.java:1341)
+	at org.h2.command.Parser.readExpression(Parser.java:1333)
+	at org.h2.command.Parser.parseSelectSimpleSelectPart(Parser.java:1255)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:1285)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1194)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1081)
+	at org.h2.command.Parser.parseSelect(Parser.java:1062)
+	at org.h2.command.Parser.parse(Parser.java:338)
+	at org.h2.command.Parser.parse(Parser.java:223)
+	at org.h2.command.Parser.prepareCommand(Parser.java:190)
+	at org.h2.engine.Session.prepareLocal(Session.java:174)
+	at org.h2.engine.Session.prepareCommand(Session.java:156)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:993)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:1197)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:167)
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.prepareStatement(ConnectionWrapperImpl.java:140)
+	... 27 more
+2017-07-15 22:31:05,846 INFO  [AWT-EventQueue-0] INFO  (jp.towersquest.squat.mainframe.action.ExitActionAdapter:21) - squat process is shutting down

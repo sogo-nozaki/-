@@ -1,0 +1,690 @@
+07-15 22:30:06 jdbc[0]: SQLException
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement SELECT
+  *
+FROM 
+    (
+     SELECT
+     '0' AS 状態
+     , CUSTOMERNAME
+     FROM
+         (
+          SELECT 
+            CUSTOMERNAME
+          FROM
+              (
+SELECT
+   CUSTOMERNAME
+FROM
+   CUSTOMERS
+
+              )
+          EXCEPT 
+          SELECT 
+            CUSTOMERNAME
+          FROM
+              (
+SELECT
+              )[*]
+         )
+     UNION ALL
+     SELECT
+     '1' AS 状態
+     , CUSTOMERNAME
+     FROM
+         (
+          SELECT 
+            CUSTOMERNAME
+          FROM
+              (
+SELECT
+              )
+          EXCEPT
+          SELECT 
+            CUSTOMERNAME
+          FROM
+              (
+SELECT
+   CUSTOMERNAME
+FROM
+   CUSTOMERS
+
+              )
+         )
+    )
+; ; expected TOP, LIMIT, DISTINCT, ALL, *, NOT, EXISTS [42001-41]
+	at org.h2.message.Message.getSQLException(Message.java:65)
+	at org.h2.message.Message.getSyntaxError(Message.java:75)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:420)
+	at org.h2.command.Parser.readTerm(Parser.java:1908)
+	at org.h2.command.Parser.readFactor(Parser.java:1500)
+	at org.h2.command.Parser.readSum(Parser.java:1487)
+	at org.h2.command.Parser.readConcat(Parser.java:1479)
+	at org.h2.command.Parser.readCondition(Parser.java:1360)
+	at org.h2.command.Parser.readAnd(Parser.java:1341)
+	at org.h2.command.Parser.readExpression(Parser.java:1333)
+	at org.h2.command.Parser.parseSelectSimpleSelectPart(Parser.java:1255)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:1285)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1194)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1081)
+	at org.h2.command.Parser.parseQueryWithParams(Parser.java:1069)
+	at org.h2.command.Parser.readTableFilter(Parser.java:727)
+	at org.h2.command.Parser.parseSelectSimpleFromPart(Parser.java:1200)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:1293)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1194)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1097)
+	at org.h2.command.Parser.parseQueryWithParams(Parser.java:1069)
+	at org.h2.command.Parser.readTableFilter(Parser.java:727)
+	at org.h2.command.Parser.parseSelectSimpleFromPart(Parser.java:1200)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:1293)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1194)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1081)
+	at org.h2.command.Parser.parseQueryWithParams(Parser.java:1069)
+	at org.h2.command.Parser.readTableFilter(Parser.java:727)
+	at org.h2.command.Parser.parseSelectSimpleFromPart(Parser.java:1200)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:1293)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1194)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1081)
+	at org.h2.command.Parser.parseSelect(Parser.java:1062)
+	at org.h2.command.Parser.parse(Parser.java:338)
+	at org.h2.command.Parser.parse(Parser.java:223)
+	at org.h2.command.Parser.prepareCommand(Parser.java:190)
+	at org.h2.engine.Session.prepareLocal(Session.java:174)
+	at org.h2.engine.Session.prepareCommand(Session.java:156)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:993)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:1197)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:167)
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.prepareStatement(ConnectionWrapperImpl.java:140)
+	at org.seasar.extension.jdbc.util.ConnectionUtil.prepareStatement(ConnectionUtil.java:50)
+	at org.seasar.extension.jdbc.impl.BasicStatementFactory.createPreparedStatement(BasicStatementFactory.java:34)
+	at org.seasar.extension.jdbc.impl.ConfigurableStatementFactory.createPreparedStatement(ConfigurableStatementFactory.java:44)
+	at org.seasar.extension.jdbc.impl.BasicHandler.prepareStatement(BasicHandler.java:95)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.prepareStatement(BasicSelectHandler.java:146)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:131)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:120)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:110)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.select(LimitedPlainSqlRequester.java:76)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.execute(LimitedPlainSqlRequester.java:37)
+	at jp.towersquest.squat.unit.impl.CompareTwoSelectQuery.compare(CompareTwoSelectQuery.java:41)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.compareSelectQuery(AssertionImpl.java:87)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.doCompare(AssertionImpl.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.assertQuery(AssertionImpl.java:53)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51.assertQuery$$invokeSuperMethod$$(AssertionImpl$$EnhancedByS2AOP$$2a798d51.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at org.seasar.framework.aop.interceptors.ThrowsInterceptor.invoke(ThrowsInterceptor.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.aop.LoggingHistoryInterceptor.invoke(LoggingHistoryInterceptor.java:29)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51.assertQuery(AssertionImpl$$EnhancedByS2AOP$$2a798d51.java)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.doAssertion(AssertEqualsAction.java:139)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.execute(AssertEqualsAction.java:96)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.access$000(AssertEqualsAction.java:20)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction$1.run(AssertEqualsAction.java:41)
+	at java.lang.Thread.run(Thread.java:748)
+07-15 22:30:06 jdbc[0]: SQLException
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement SELECT ; expected TOP, LIMIT, DISTINCT, ALL, *, NOT, EXISTS [42001-41]
+	at org.h2.message.Message.getSQLException(Message.java:65)
+	at org.h2.message.Message.getSyntaxError(Message.java:75)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:420)
+	at org.h2.command.Parser.readTerm(Parser.java:1908)
+	at org.h2.command.Parser.readFactor(Parser.java:1500)
+	at org.h2.command.Parser.readSum(Parser.java:1487)
+	at org.h2.command.Parser.readConcat(Parser.java:1479)
+	at org.h2.command.Parser.readCondition(Parser.java:1360)
+	at org.h2.command.Parser.readAnd(Parser.java:1341)
+	at org.h2.command.Parser.readExpression(Parser.java:1333)
+	at org.h2.command.Parser.parseSelectSimpleSelectPart(Parser.java:1255)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:1285)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1194)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1081)
+	at org.h2.command.Parser.parseSelect(Parser.java:1062)
+	at org.h2.command.Parser.parse(Parser.java:338)
+	at org.h2.command.Parser.parse(Parser.java:223)
+	at org.h2.command.Parser.prepareCommand(Parser.java:190)
+	at org.h2.engine.Session.prepareLocal(Session.java:174)
+	at org.h2.engine.Session.prepareCommand(Session.java:156)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:993)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:1197)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:167)
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.prepareStatement(ConnectionWrapperImpl.java:140)
+	at org.seasar.extension.jdbc.util.ConnectionUtil.prepareStatement(ConnectionUtil.java:50)
+	at org.seasar.extension.jdbc.impl.BasicStatementFactory.createPreparedStatement(BasicStatementFactory.java:34)
+	at org.seasar.extension.jdbc.impl.ConfigurableStatementFactory.createPreparedStatement(ConfigurableStatementFactory.java:44)
+	at org.seasar.extension.jdbc.impl.BasicHandler.prepareStatement(BasicHandler.java:95)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.prepareStatement(BasicSelectHandler.java:146)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:131)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:120)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:110)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.select(LimitedPlainSqlRequester.java:76)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.execute(LimitedPlainSqlRequester.java:37)
+	at jp.towersquest.squat.unit.impl.CompareTwoSelectQuery.analyzeQuery(CompareTwoSelectQuery.java:86)
+	at jp.towersquest.squat.unit.impl.CompareTwoSelectQuery.compare(CompareTwoSelectQuery.java:43)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.compareSelectQuery(AssertionImpl.java:87)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.doCompare(AssertionImpl.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.assertQuery(AssertionImpl.java:53)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51.assertQuery$$invokeSuperMethod$$(AssertionImpl$$EnhancedByS2AOP$$2a798d51.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at org.seasar.framework.aop.interceptors.ThrowsInterceptor.invoke(ThrowsInterceptor.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.aop.LoggingHistoryInterceptor.invoke(LoggingHistoryInterceptor.java:29)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51.assertQuery(AssertionImpl$$EnhancedByS2AOP$$2a798d51.java)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.doAssertion(AssertEqualsAction.java:139)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.execute(AssertEqualsAction.java:96)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.access$000(AssertEqualsAction.java:20)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction$1.run(AssertEqualsAction.java:41)
+	at java.lang.Thread.run(Thread.java:748)
+07-15 22:30:06 jdbc[0]: SQLException
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement SELECT ; expected TOP, LIMIT, DISTINCT, ALL, *, NOT, EXISTS [42001-41]
+	at org.h2.message.Message.getSQLException(Message.java:65)
+	at org.h2.message.Message.getSyntaxError(Message.java:75)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:420)
+	at org.h2.command.Parser.readTerm(Parser.java:1908)
+	at org.h2.command.Parser.readFactor(Parser.java:1500)
+	at org.h2.command.Parser.readSum(Parser.java:1487)
+	at org.h2.command.Parser.readConcat(Parser.java:1479)
+	at org.h2.command.Parser.readCondition(Parser.java:1360)
+	at org.h2.command.Parser.readAnd(Parser.java:1341)
+	at org.h2.command.Parser.readExpression(Parser.java:1333)
+	at org.h2.command.Parser.parseSelectSimpleSelectPart(Parser.java:1255)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:1285)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1194)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1081)
+	at org.h2.command.Parser.parseSelect(Parser.java:1062)
+	at org.h2.command.Parser.parse(Parser.java:338)
+	at org.h2.command.Parser.parse(Parser.java:223)
+	at org.h2.command.Parser.prepareCommand(Parser.java:190)
+	at org.h2.engine.Session.prepareLocal(Session.java:174)
+	at org.h2.engine.Session.prepareCommand(Session.java:156)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:993)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:1197)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:167)
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.prepareStatement(ConnectionWrapperImpl.java:140)
+	at org.seasar.extension.jdbc.util.ConnectionUtil.prepareStatement(ConnectionUtil.java:50)
+	at org.seasar.extension.jdbc.impl.BasicStatementFactory.createPreparedStatement(BasicStatementFactory.java:34)
+	at org.seasar.extension.jdbc.impl.ConfigurableStatementFactory.createPreparedStatement(ConfigurableStatementFactory.java:44)
+	at org.seasar.extension.jdbc.impl.BasicHandler.prepareStatement(BasicHandler.java:95)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.prepareStatement(BasicSelectHandler.java:146)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:131)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:120)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:110)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.select(LimitedPlainSqlRequester.java:76)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.execute(LimitedPlainSqlRequester.java:37)
+	at jp.towersquest.squat.mainframe.view.impl.SqlTableUpdater.executeSql(SqlTableUpdater.java:104)
+	at jp.towersquest.squat.mainframe.view.impl.SqlTableUpdater.proceed(SqlTableUpdater.java:48)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.updateActualTable(AssertEqualsAction.java:149)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.access$1100(AssertEqualsAction.java:20)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction$5.run(AssertEqualsAction.java:123)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:311)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:756)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:80)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:726)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+07-15 22:30:19 jdbc[0]: SQLException
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement SELECT
+  *
+FROM 
+    (
+     SELECT
+     '0' AS 状態
+     , CUSTOMERNAME
+     FROM
+         (
+          SELECT 
+            CUSTOMERNAME
+          FROM
+              (
+SELECT
+   CUSTOMERNAME
+FROM
+   CUSTOMERS
+
+              )
+          EXCEPT 
+          SELECT 
+            CUSTOMERNAME
+          FROM
+              (
+SELECT 
+              )[*]
+         )
+     UNION ALL
+     SELECT
+     '1' AS 状態
+     , CUSTOMERNAME
+     FROM
+         (
+          SELECT 
+            CUSTOMERNAME
+          FROM
+              (
+SELECT 
+              )
+          EXCEPT
+          SELECT 
+            CUSTOMERNAME
+          FROM
+              (
+SELECT
+   CUSTOMERNAME
+FROM
+   CUSTOMERS
+
+              )
+         )
+    )
+; ; expected TOP, LIMIT, DISTINCT, ALL, *, NOT, EXISTS [42001-41]
+	at org.h2.message.Message.getSQLException(Message.java:65)
+	at org.h2.message.Message.getSyntaxError(Message.java:75)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:420)
+	at org.h2.command.Parser.readTerm(Parser.java:1908)
+	at org.h2.command.Parser.readFactor(Parser.java:1500)
+	at org.h2.command.Parser.readSum(Parser.java:1487)
+	at org.h2.command.Parser.readConcat(Parser.java:1479)
+	at org.h2.command.Parser.readCondition(Parser.java:1360)
+	at org.h2.command.Parser.readAnd(Parser.java:1341)
+	at org.h2.command.Parser.readExpression(Parser.java:1333)
+	at org.h2.command.Parser.parseSelectSimpleSelectPart(Parser.java:1255)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:1285)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1194)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1081)
+	at org.h2.command.Parser.parseQueryWithParams(Parser.java:1069)
+	at org.h2.command.Parser.readTableFilter(Parser.java:727)
+	at org.h2.command.Parser.parseSelectSimpleFromPart(Parser.java:1200)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:1293)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1194)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1097)
+	at org.h2.command.Parser.parseQueryWithParams(Parser.java:1069)
+	at org.h2.command.Parser.readTableFilter(Parser.java:727)
+	at org.h2.command.Parser.parseSelectSimpleFromPart(Parser.java:1200)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:1293)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1194)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1081)
+	at org.h2.command.Parser.parseQueryWithParams(Parser.java:1069)
+	at org.h2.command.Parser.readTableFilter(Parser.java:727)
+	at org.h2.command.Parser.parseSelectSimpleFromPart(Parser.java:1200)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:1293)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1194)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1081)
+	at org.h2.command.Parser.parseSelect(Parser.java:1062)
+	at org.h2.command.Parser.parse(Parser.java:338)
+	at org.h2.command.Parser.parse(Parser.java:223)
+	at org.h2.command.Parser.prepareCommand(Parser.java:190)
+	at org.h2.engine.Session.prepareLocal(Session.java:174)
+	at org.h2.engine.Session.prepareCommand(Session.java:156)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:993)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:1197)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:167)
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.prepareStatement(ConnectionWrapperImpl.java:140)
+	at org.seasar.extension.jdbc.util.ConnectionUtil.prepareStatement(ConnectionUtil.java:50)
+	at org.seasar.extension.jdbc.impl.BasicStatementFactory.createPreparedStatement(BasicStatementFactory.java:34)
+	at org.seasar.extension.jdbc.impl.ConfigurableStatementFactory.createPreparedStatement(ConfigurableStatementFactory.java:44)
+	at org.seasar.extension.jdbc.impl.BasicHandler.prepareStatement(BasicHandler.java:95)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.prepareStatement(BasicSelectHandler.java:146)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:131)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:120)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:110)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.select(LimitedPlainSqlRequester.java:76)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.execute(LimitedPlainSqlRequester.java:37)
+	at jp.towersquest.squat.unit.impl.CompareTwoSelectQuery.compare(CompareTwoSelectQuery.java:41)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.compareSelectQuery(AssertionImpl.java:87)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.doCompare(AssertionImpl.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.assertQuery(AssertionImpl.java:53)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51.assertQuery$$invokeSuperMethod$$(AssertionImpl$$EnhancedByS2AOP$$2a798d51.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at org.seasar.framework.aop.interceptors.ThrowsInterceptor.invoke(ThrowsInterceptor.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.aop.LoggingHistoryInterceptor.invoke(LoggingHistoryInterceptor.java:29)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51.assertQuery(AssertionImpl$$EnhancedByS2AOP$$2a798d51.java)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.doAssertion(AssertEqualsAction.java:139)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.execute(AssertEqualsAction.java:96)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.access$000(AssertEqualsAction.java:20)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction$1.run(AssertEqualsAction.java:41)
+	at java.lang.Thread.run(Thread.java:748)
+07-15 22:30:19 jdbc[0]: SQLException
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement SELECT ;[*] ; expected TOP, LIMIT, DISTINCT, ALL, *, NOT, EXISTS, SELECT, FROM [42001-41]
+	at org.h2.message.Message.getSQLException(Message.java:65)
+	at org.h2.message.Message.getSyntaxError(Message.java:75)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:420)
+	at org.h2.command.Parser.readTerm(Parser.java:1776)
+	at org.h2.command.Parser.readFactor(Parser.java:1500)
+	at org.h2.command.Parser.readSum(Parser.java:1487)
+	at org.h2.command.Parser.readConcat(Parser.java:1479)
+	at org.h2.command.Parser.readCondition(Parser.java:1360)
+	at org.h2.command.Parser.readAnd(Parser.java:1341)
+	at org.h2.command.Parser.readExpression(Parser.java:1333)
+	at org.h2.command.Parser.parseSelectSimpleSelectPart(Parser.java:1255)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:1285)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1194)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1081)
+	at org.h2.command.Parser.parseSelect(Parser.java:1062)
+	at org.h2.command.Parser.parse(Parser.java:338)
+	at org.h2.command.Parser.parse(Parser.java:223)
+	at org.h2.command.Parser.prepareCommand(Parser.java:190)
+	at org.h2.engine.Session.prepareLocal(Session.java:174)
+	at org.h2.engine.Session.prepareCommand(Session.java:156)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:993)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:1197)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:167)
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.prepareStatement(ConnectionWrapperImpl.java:140)
+	at org.seasar.extension.jdbc.util.ConnectionUtil.prepareStatement(ConnectionUtil.java:50)
+	at org.seasar.extension.jdbc.impl.BasicStatementFactory.createPreparedStatement(BasicStatementFactory.java:34)
+	at org.seasar.extension.jdbc.impl.ConfigurableStatementFactory.createPreparedStatement(ConfigurableStatementFactory.java:44)
+	at org.seasar.extension.jdbc.impl.BasicHandler.prepareStatement(BasicHandler.java:95)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.prepareStatement(BasicSelectHandler.java:146)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:131)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:120)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:110)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.select(LimitedPlainSqlRequester.java:76)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.execute(LimitedPlainSqlRequester.java:37)
+	at jp.towersquest.squat.unit.impl.CompareTwoSelectQuery.analyzeQuery(CompareTwoSelectQuery.java:86)
+	at jp.towersquest.squat.unit.impl.CompareTwoSelectQuery.compare(CompareTwoSelectQuery.java:43)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.compareSelectQuery(AssertionImpl.java:87)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.doCompare(AssertionImpl.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.assertQuery(AssertionImpl.java:53)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51.assertQuery$$invokeSuperMethod$$(AssertionImpl$$EnhancedByS2AOP$$2a798d51.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at org.seasar.framework.aop.interceptors.ThrowsInterceptor.invoke(ThrowsInterceptor.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.aop.LoggingHistoryInterceptor.invoke(LoggingHistoryInterceptor.java:29)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51.assertQuery(AssertionImpl$$EnhancedByS2AOP$$2a798d51.java)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.doAssertion(AssertEqualsAction.java:139)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.execute(AssertEqualsAction.java:96)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.access$000(AssertEqualsAction.java:20)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction$1.run(AssertEqualsAction.java:41)
+	at java.lang.Thread.run(Thread.java:748)
+07-15 22:30:19 jdbc[0]: SQLException
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement SELECT ;[*] ; expected TOP, LIMIT, DISTINCT, ALL, *, NOT, EXISTS, SELECT, FROM [42001-41]
+	at org.h2.message.Message.getSQLException(Message.java:65)
+	at org.h2.message.Message.getSyntaxError(Message.java:75)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:420)
+	at org.h2.command.Parser.readTerm(Parser.java:1776)
+	at org.h2.command.Parser.readFactor(Parser.java:1500)
+	at org.h2.command.Parser.readSum(Parser.java:1487)
+	at org.h2.command.Parser.readConcat(Parser.java:1479)
+	at org.h2.command.Parser.readCondition(Parser.java:1360)
+	at org.h2.command.Parser.readAnd(Parser.java:1341)
+	at org.h2.command.Parser.readExpression(Parser.java:1333)
+	at org.h2.command.Parser.parseSelectSimpleSelectPart(Parser.java:1255)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:1285)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1194)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1081)
+	at org.h2.command.Parser.parseSelect(Parser.java:1062)
+	at org.h2.command.Parser.parse(Parser.java:338)
+	at org.h2.command.Parser.parse(Parser.java:223)
+	at org.h2.command.Parser.prepareCommand(Parser.java:190)
+	at org.h2.engine.Session.prepareLocal(Session.java:174)
+	at org.h2.engine.Session.prepareCommand(Session.java:156)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:993)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:1197)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:167)
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.prepareStatement(ConnectionWrapperImpl.java:140)
+	at org.seasar.extension.jdbc.util.ConnectionUtil.prepareStatement(ConnectionUtil.java:50)
+	at org.seasar.extension.jdbc.impl.BasicStatementFactory.createPreparedStatement(BasicStatementFactory.java:34)
+	at org.seasar.extension.jdbc.impl.ConfigurableStatementFactory.createPreparedStatement(ConfigurableStatementFactory.java:44)
+	at org.seasar.extension.jdbc.impl.BasicHandler.prepareStatement(BasicHandler.java:95)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.prepareStatement(BasicSelectHandler.java:146)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:131)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:120)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:110)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.select(LimitedPlainSqlRequester.java:76)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.execute(LimitedPlainSqlRequester.java:37)
+	at jp.towersquest.squat.mainframe.view.impl.SqlTableUpdater.executeSql(SqlTableUpdater.java:104)
+	at jp.towersquest.squat.mainframe.view.impl.SqlTableUpdater.proceed(SqlTableUpdater.java:48)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.updateActualTable(AssertEqualsAction.java:149)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.access$1100(AssertEqualsAction.java:20)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction$5.run(AssertEqualsAction.java:123)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:311)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:756)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:80)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:726)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+07-15 22:30:26 jdbc[0]: SQLException
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement SELECT
+  *
+FROM 
+    (
+     SELECT
+     '0' AS 状態
+     , CUSTOMERNAME
+     FROM
+         (
+          SELECT 
+            CUSTOMERNAME
+          FROM
+              (
+SELECT
+   CUSTOMERNAME
+FROM
+   CUSTOMERS
+
+              )
+          EXCEPT 
+          SELECT 
+            CUSTOMERNAME
+          FROM
+              (
+SELECT
+              )[*]
+         )
+     UNION ALL
+     SELECT
+     '1' AS 状態
+     , CUSTOMERNAME
+     FROM
+         (
+          SELECT 
+            CUSTOMERNAME
+          FROM
+              (
+SELECT
+              )
+          EXCEPT
+          SELECT 
+            CUSTOMERNAME
+          FROM
+              (
+SELECT
+   CUSTOMERNAME
+FROM
+   CUSTOMERS
+
+              )
+         )
+    )
+; ; expected TOP, LIMIT, DISTINCT, ALL, *, NOT, EXISTS [42001-41]
+	at org.h2.message.Message.getSQLException(Message.java:65)
+	at org.h2.message.Message.getSyntaxError(Message.java:75)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:420)
+	at org.h2.command.Parser.readTerm(Parser.java:1908)
+	at org.h2.command.Parser.readFactor(Parser.java:1500)
+	at org.h2.command.Parser.readSum(Parser.java:1487)
+	at org.h2.command.Parser.readConcat(Parser.java:1479)
+	at org.h2.command.Parser.readCondition(Parser.java:1360)
+	at org.h2.command.Parser.readAnd(Parser.java:1341)
+	at org.h2.command.Parser.readExpression(Parser.java:1333)
+	at org.h2.command.Parser.parseSelectSimpleSelectPart(Parser.java:1255)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:1285)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1194)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1081)
+	at org.h2.command.Parser.parseQueryWithParams(Parser.java:1069)
+	at org.h2.command.Parser.readTableFilter(Parser.java:727)
+	at org.h2.command.Parser.parseSelectSimpleFromPart(Parser.java:1200)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:1293)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1194)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1097)
+	at org.h2.command.Parser.parseQueryWithParams(Parser.java:1069)
+	at org.h2.command.Parser.readTableFilter(Parser.java:727)
+	at org.h2.command.Parser.parseSelectSimpleFromPart(Parser.java:1200)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:1293)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1194)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1081)
+	at org.h2.command.Parser.parseQueryWithParams(Parser.java:1069)
+	at org.h2.command.Parser.readTableFilter(Parser.java:727)
+	at org.h2.command.Parser.parseSelectSimpleFromPart(Parser.java:1200)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:1293)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1194)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1081)
+	at org.h2.command.Parser.parseSelect(Parser.java:1062)
+	at org.h2.command.Parser.parse(Parser.java:338)
+	at org.h2.command.Parser.parse(Parser.java:223)
+	at org.h2.command.Parser.prepareCommand(Parser.java:190)
+	at org.h2.engine.Session.prepareLocal(Session.java:174)
+	at org.h2.engine.Session.prepareCommand(Session.java:156)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:993)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:1197)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:167)
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.prepareStatement(ConnectionWrapperImpl.java:140)
+	at org.seasar.extension.jdbc.util.ConnectionUtil.prepareStatement(ConnectionUtil.java:50)
+	at org.seasar.extension.jdbc.impl.BasicStatementFactory.createPreparedStatement(BasicStatementFactory.java:34)
+	at org.seasar.extension.jdbc.impl.ConfigurableStatementFactory.createPreparedStatement(ConfigurableStatementFactory.java:44)
+	at org.seasar.extension.jdbc.impl.BasicHandler.prepareStatement(BasicHandler.java:95)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.prepareStatement(BasicSelectHandler.java:146)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:131)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:120)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:110)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.select(LimitedPlainSqlRequester.java:76)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.execute(LimitedPlainSqlRequester.java:37)
+	at jp.towersquest.squat.unit.impl.CompareTwoSelectQuery.compare(CompareTwoSelectQuery.java:41)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.compareSelectQuery(AssertionImpl.java:87)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.doCompare(AssertionImpl.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.assertQuery(AssertionImpl.java:53)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51.assertQuery$$invokeSuperMethod$$(AssertionImpl$$EnhancedByS2AOP$$2a798d51.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at org.seasar.framework.aop.interceptors.ThrowsInterceptor.invoke(ThrowsInterceptor.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.aop.LoggingHistoryInterceptor.invoke(LoggingHistoryInterceptor.java:29)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51.assertQuery(AssertionImpl$$EnhancedByS2AOP$$2a798d51.java)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.doAssertion(AssertEqualsAction.java:139)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.execute(AssertEqualsAction.java:96)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.access$000(AssertEqualsAction.java:20)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction$1.run(AssertEqualsAction.java:41)
+	at java.lang.Thread.run(Thread.java:748)
+07-15 22:30:26 jdbc[0]: SQLException
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement SELECT;[*] ; expected TOP, LIMIT, DISTINCT, ALL, *, NOT, EXISTS, SELECT, FROM [42001-41]
+	at org.h2.message.Message.getSQLException(Message.java:65)
+	at org.h2.message.Message.getSyntaxError(Message.java:75)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:420)
+	at org.h2.command.Parser.readTerm(Parser.java:1776)
+	at org.h2.command.Parser.readFactor(Parser.java:1500)
+	at org.h2.command.Parser.readSum(Parser.java:1487)
+	at org.h2.command.Parser.readConcat(Parser.java:1479)
+	at org.h2.command.Parser.readCondition(Parser.java:1360)
+	at org.h2.command.Parser.readAnd(Parser.java:1341)
+	at org.h2.command.Parser.readExpression(Parser.java:1333)
+	at org.h2.command.Parser.parseSelectSimpleSelectPart(Parser.java:1255)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:1285)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1194)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1081)
+	at org.h2.command.Parser.parseSelect(Parser.java:1062)
+	at org.h2.command.Parser.parse(Parser.java:338)
+	at org.h2.command.Parser.parse(Parser.java:223)
+	at org.h2.command.Parser.prepareCommand(Parser.java:190)
+	at org.h2.engine.Session.prepareLocal(Session.java:174)
+	at org.h2.engine.Session.prepareCommand(Session.java:156)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:993)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:1197)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:167)
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.prepareStatement(ConnectionWrapperImpl.java:140)
+	at org.seasar.extension.jdbc.util.ConnectionUtil.prepareStatement(ConnectionUtil.java:50)
+	at org.seasar.extension.jdbc.impl.BasicStatementFactory.createPreparedStatement(BasicStatementFactory.java:34)
+	at org.seasar.extension.jdbc.impl.ConfigurableStatementFactory.createPreparedStatement(ConfigurableStatementFactory.java:44)
+	at org.seasar.extension.jdbc.impl.BasicHandler.prepareStatement(BasicHandler.java:95)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.prepareStatement(BasicSelectHandler.java:146)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:131)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:120)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:110)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.select(LimitedPlainSqlRequester.java:76)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.execute(LimitedPlainSqlRequester.java:37)
+	at jp.towersquest.squat.unit.impl.CompareTwoSelectQuery.analyzeQuery(CompareTwoSelectQuery.java:86)
+	at jp.towersquest.squat.unit.impl.CompareTwoSelectQuery.compare(CompareTwoSelectQuery.java:43)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.compareSelectQuery(AssertionImpl.java:87)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.doCompare(AssertionImpl.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl.assertQuery(AssertionImpl.java:53)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51.assertQuery$$invokeSuperMethod$$(AssertionImpl$$EnhancedByS2AOP$$2a798d51.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at org.seasar.framework.aop.interceptors.ThrowsInterceptor.invoke(ThrowsInterceptor.java:64)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.aop.LoggingHistoryInterceptor.invoke(LoggingHistoryInterceptor.java:29)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51$$MethodInvocation$$assertQuery0.proceed(MethodInvocationClassGenerator.java)
+	at jp.towersquest.squat.unit.impl.AssertionImpl$$EnhancedByS2AOP$$2a798d51.assertQuery(AssertionImpl$$EnhancedByS2AOP$$2a798d51.java)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.doAssertion(AssertEqualsAction.java:139)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.execute(AssertEqualsAction.java:96)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.access$000(AssertEqualsAction.java:20)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction$1.run(AssertEqualsAction.java:41)
+	at java.lang.Thread.run(Thread.java:748)
+07-15 22:30:26 jdbc[0]: SQLException
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement SELECT;[*] ; expected TOP, LIMIT, DISTINCT, ALL, *, NOT, EXISTS, SELECT, FROM [42001-41]
+	at org.h2.message.Message.getSQLException(Message.java:65)
+	at org.h2.message.Message.getSyntaxError(Message.java:75)
+	at org.h2.command.Parser.getSyntaxError(Parser.java:420)
+	at org.h2.command.Parser.readTerm(Parser.java:1776)
+	at org.h2.command.Parser.readFactor(Parser.java:1500)
+	at org.h2.command.Parser.readSum(Parser.java:1487)
+	at org.h2.command.Parser.readConcat(Parser.java:1479)
+	at org.h2.command.Parser.readCondition(Parser.java:1360)
+	at org.h2.command.Parser.readAnd(Parser.java:1341)
+	at org.h2.command.Parser.readExpression(Parser.java:1333)
+	at org.h2.command.Parser.parseSelectSimpleSelectPart(Parser.java:1255)
+	at org.h2.command.Parser.parseSelectSimple(Parser.java:1285)
+	at org.h2.command.Parser.parseSelectSub(Parser.java:1194)
+	at org.h2.command.Parser.parseSelectUnion(Parser.java:1081)
+	at org.h2.command.Parser.parseSelect(Parser.java:1062)
+	at org.h2.command.Parser.parse(Parser.java:338)
+	at org.h2.command.Parser.parse(Parser.java:223)
+	at org.h2.command.Parser.prepareCommand(Parser.java:190)
+	at org.h2.engine.Session.prepareLocal(Session.java:174)
+	at org.h2.engine.Session.prepareCommand(Session.java:156)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:993)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:1197)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:167)
+	at org.seasar.extension.dbcp.impl.ConnectionWrapperImpl.prepareStatement(ConnectionWrapperImpl.java:140)
+	at org.seasar.extension.jdbc.util.ConnectionUtil.prepareStatement(ConnectionUtil.java:50)
+	at org.seasar.extension.jdbc.impl.BasicStatementFactory.createPreparedStatement(BasicStatementFactory.java:34)
+	at org.seasar.extension.jdbc.impl.ConfigurableStatementFactory.createPreparedStatement(ConfigurableStatementFactory.java:44)
+	at org.seasar.extension.jdbc.impl.BasicHandler.prepareStatement(BasicHandler.java:95)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.prepareStatement(BasicSelectHandler.java:146)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:131)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:120)
+	at org.seasar.extension.jdbc.impl.BasicSelectHandler.execute(BasicSelectHandler.java:110)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.select(LimitedPlainSqlRequester.java:76)
+	at jp.towersquest.squat.db.impl.LimitedPlainSqlRequester.execute(LimitedPlainSqlRequester.java:37)
+	at jp.towersquest.squat.mainframe.view.impl.SqlTableUpdater.executeSql(SqlTableUpdater.java:104)
+	at jp.towersquest.squat.mainframe.view.impl.SqlTableUpdater.proceed(SqlTableUpdater.java:48)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.updateActualTable(AssertEqualsAction.java:149)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction.access$1100(AssertEqualsAction.java:20)
+	at jp.towersquest.squat.mainframe.action.AssertEqualsAction$5.run(AssertEqualsAction.java:123)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:311)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:756)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:80)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:726)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
